@@ -17,8 +17,9 @@ sed -i '1s/python/python3/' /android_tools/repo
 
 WORKDIR /home/project/
 
-#RUN git config --global user.name "Lucas Zanella" \
-#git config --global user.email "me@lucaszanella.com"
+RUN git config --global user.name "Lucas Zanella" && \
+git config --global user.email "me@lucaszanella.com" && \
+git config --global color.ui true
 
 #RUN repo init -u https://android.googlesource.com/platform/manifest
 
