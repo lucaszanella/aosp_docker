@@ -1,0 +1,1 @@
+sudo docker run -v $PWD/../project:/home/project -it aosp_builder /bin/bash
