@@ -9,9 +9,17 @@ libpulse-dev
 ENV PATH="/android_tools:${PATH}"
 
 RUN mkdir -p /android_tools \
-&& curl https://storage.googleapis.com/git-repo-downloads/repo > /android_tools/repo \
-&& chmod a+x /android_tools/repo && \
-sed -i '1s/python/python3/' /android_tools/repo
+&& curl https://storage.googleapis.com/git-repo-downloads/repo > /android_tools/repo\
+&& chmod a+x /android_tools/repo
+
+#RUN echo 'alias python=python3' >> ~/.bashrc
+#link is beter than alias because some repos like external/qemu looks for python executable in $PATH 
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
+RUN apt-get install -y python3-pip
+
+#&& chmod a+x /android_tools/repo && \
+#sed -i '1s/python/python3/' /android_tools/repo
 
 #RUN gpg --recv-key 8BB9AD793E8E6153AF0F9A4416530D5E920F5C65 \
 #&& sh -c 'curl https://storage.googleapis.com/git-repo-downloads/repo.asc | gpg --verify - /android_tools/repo'
@@ -21,6 +29,8 @@ WORKDIR /home/project/
 RUN git config --global user.name "Lucas Zanella" && \
 git config --global user.email "me@lucaszanella.com" && \
 git config --global color.ui true
+
+
 
 #RUN repo init -u https://android.googlesource.com/platform/manifest
 

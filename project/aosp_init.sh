@@ -1,14 +1,17 @@
+set -x
 set -e
 
 cd disk
 rm -rf *
-mkdir aosp && cd aosp
+mkdir -p aosp
+cd aosp
 
 
-TAG_NAME=RQ1A.210105.003.2021.01.05.03
+#TAG_NAME=RQ1A.210105.003.2021.01.05.03
+TAG_NAME=lz_experiments
 mkdir grapheneos-$TAG_NAME
 cd grapheneos-$TAG_NAME
-repo init -u https://github.com/GrapheneOS/platform_manifest.git -b refs/tags/$TAG_NAME
+repo init -u https://github.com/lucaszanella/platform_manifest
 
 #repo init -u https://android.googlesource.com/platform/manifest
 
