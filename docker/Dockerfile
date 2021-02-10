@@ -30,7 +30,8 @@ RUN git config --global user.name "Lucas Zanella" && \
 git config --global user.email "me@lucaszanella.com" && \
 git config --global color.ui true
 
-
+#for android emulator only
+RUN pip3 install absl-py
 
 #RUN repo init -u https://android.googlesource.com/platform/manifest
 

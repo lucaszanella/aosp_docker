@@ -1,8 +1,10 @@
 set -x
 set -e
 
+#cd disk
+#rm -rf *
+
 cd disk
-rm -rf *
 mkdir -p aosp
 cd aosp
 
