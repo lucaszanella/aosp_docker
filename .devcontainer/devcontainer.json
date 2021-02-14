@@ -13,6 +13,6 @@
         "source=${localEnv:HOME}/Android,target=/workspace/project/sdk,type=bind,consistency=cached",
         "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"],
     "containerEnv": {
-        "DISPLAY": "unix${DISPLAY}",
+        "DISPLAY": "unix${localEnv:DISPLAY}",
     },
 }
