@@ -1,0 +1,18 @@
+{
+    "name": "AOSP development",
+    "dockerFile": "../docker/Dockerfile",
+    "extensions": [
+        "dracula-theme.theme-dracula",
+        "ms-vscode.cpptools",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
+    "workspaceFolder": "/workspace",
+    "mounts": ["source=/mnt/android-dev-3,target=/workspace/project/disk,type=bind,consistency=cached",
+        "source=${localEnv:HOME}/Android,target=/workspace/project/sdk,type=bind,consistency=cached",
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached"],
+    "containerEnv": {
+        "DISPLAY": "unix${DISPLAY}",
+    },
+}

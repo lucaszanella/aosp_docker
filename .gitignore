@@ -1,3 +1,5 @@
 project/aosp/*
 project/.repo/*
 project/non_disk/*
+project/disk/*
+project/sdk/*
