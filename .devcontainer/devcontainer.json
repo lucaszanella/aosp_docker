@@ -15,4 +15,5 @@
     "containerEnv": {
         "DISPLAY": "unix${localEnv:DISPLAY}",
     },
+    "runArgs": ["--device=/dev/kvm"]
 }
