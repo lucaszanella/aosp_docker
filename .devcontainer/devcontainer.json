@@ -6,6 +6,8 @@
         "ms-vscode.cpptools",
         "mhutchie.git-graph",
         "eamodio.gitlens",
+        "twxs.cmake",
+        "ms-vscode.cmake-tools"
     ],
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
     "workspaceFolder": "/workspace",
