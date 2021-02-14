@@ -33,6 +33,10 @@ git config --global color.ui true
 #for android emulator only
 RUN pip3 install absl-py
 
+RUN /bin/bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
+
+RUN apt-get install -y libc6-dbg gdb valgrind
+
 #RUN repo init -u https://android.googlesource.com/platform/manifest
 
 #To checkout a branch:
