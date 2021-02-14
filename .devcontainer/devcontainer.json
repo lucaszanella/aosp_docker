@@ -15,6 +15,7 @@
     "containerEnv": {
         "DISPLAY": "unix${localEnv:DISPLAY}",
         "AOSP_ROOT": "/workspace/project/disk/aosp/grapheneos-lz_experiments",
+        "EMULATOR_ROOT": "/workspace/project/non_disk/aosp/emulator-lz_experiments/",
         "GEN_OUT_GEN_x86_64": "/workspace/project/disk/aosp/grapheneos-lz_experiments/out/target/product/generic_x86_64",
         "COMPILED_EMULATOR_DIR": "/workspace/project/non_disk/aosp/emulator-lz_experiments/external/qemu/objs",
         "PREBUILT_EMULATOR_DIR": "/workspace/project/disk/aosp/grapheneos-lz_experiments/prebuilts/android-emulator/linux-x86_64/",
