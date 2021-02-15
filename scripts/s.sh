@@ -1,3 +1,4 @@
+#!/bin/bash
 #run like this: source s.sh
 ORIGINAL_DIR=$PWD
 cd $AOSP_ROOT

@@ -1,3 +1,4 @@
+#!/bin/bash
 cd ${AOSP_ROOT}
 
 cd prebuilts/android-emulator/linux-x86_64
